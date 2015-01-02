@@ -1,13 +1,34 @@
-<tool id="label-by-barcode" name="Label By Barcode">
+<!--
+
+Label By Barcode
+
+  TODO:
+
+    - Generalize for HiSeq or MiSeq runs (bc-seq-proc, read format, etc ...).
+    - Output FASTA file with QIIME-esque headers.
+
+-->
+
+<tool id="Preprocess-illumina-16S" name="Preprocess Illumina 16S rRNA">
     <inputs>
      <param type="data" format="fastq" name="in_left" label="Left Reads"/>
      <param type="data" format="fastq" name="in_bc" label="Barcode Reads"/>
      <param type="data" format="fastq" name="in_right" label="Right Reads"/>
      <param type="data" format="csv" name="barcodes" label="Barcodes Table"/>
+  	 <param type="text" name="value" label="Value to require for flag"/>
   </inputs>
 
   <command interpreter="python">
-    label-by-barcode
+    hp-label-by-barcode \
+      -illumina.py --left-reads $in_left  \
+      --barcode-reads $in_bc \
+      --right-reads $in_right \
+      --barcodes $barcodes \
+      --reverse-barcode \
+      --complement-barcode \
+      --bc-seq-proc r[0:7] \
+      --gzip \
+      --output $output
   </command>
 
   <outputs>
