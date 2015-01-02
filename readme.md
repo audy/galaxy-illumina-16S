@@ -2,6 +2,14 @@
 
 Wrapping https://github.com/audy/hiseq-16s-pipeline in XML for Galaxy.
 
+## Installation
+
+```sh
+cp -r hiseq-pipeline-galaxy ./galaxy-dist/tools/
+
+# restart galaxy
+```
+
 ## License
 
 The MIT License (MIT)
