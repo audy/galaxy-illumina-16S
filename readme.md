@@ -6,8 +6,7 @@ Wrapping https://github.com/audy/hiseq-16s-pipeline in XML for Galaxy.
 
 ```sh
 cp -r hiseq-pipeline-galaxy ./galaxy-dist/tools/
-
-# restart galaxy
+fab vagrant galaxy:restart
 ```
 
 ## License
