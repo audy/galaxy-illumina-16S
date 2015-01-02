@@ -1,0 +1,15 @@
+<!-- Hello, World! -->
+
+<tool id="Preprocess-illumina-16S" name="Preprocess Illumina 16S rRNA">
+    <inputs>
+  	 <param type="text" name="value" label="Value to require for flag"/>
+  </inputs>
+
+  <command interpreter="python">
+    bin/hello-world $value
+  </command>
+
+  <outputs>
+    <data name="output" format="txt" />
+  </outputs>
+</tool>
