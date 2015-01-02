@@ -1,0 +1,3 @@
+[submodule "dependencies/hiseq-16s-pipeline"]
+	path = dependencies/hiseq-16s-pipeline
+	url = https://github.com/audy/hiseq-16s-pipeline.git

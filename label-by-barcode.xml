@@ -1,0 +1,16 @@
+<tool id="label-by-barcode" name="Label By Barcode">
+    <inputs>
+     <param type="data" format="fastq" name="in_left" label="Left Reads"/>
+     <param type="data" format="fastq" name="in_bc" label="Barcode Reads"/>
+     <param type="data" format="fastq" name="in_right" label="Right Reads"/>
+     <param type="data" format="csv" name="barcodes" label="Barcodes Table"/>
+  </inputs>
+
+  <command interpreter="python">
+    label-by-barcode
+  </command>
+
+  <outputs>
+    <data name="output" format="fasta" />
+  </outputs>
+</tool>
