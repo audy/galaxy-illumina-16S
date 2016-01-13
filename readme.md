@@ -1,8 +1,14 @@
 # Galaxy Illumina 16S rRNA pipeline
 
-Wrapping https://github.com/audy/hiseq-16s-pipeline in XML for Galaxy.
+Wrapping https://github.com/audy/hiseq-16s-pipeline in XML for Galaxy. Designed to work with https://github.com/audy/vagrant-galaxy.
 
 ## Installation
+
+### Install Galaxy
+
+I used https://github.com/audy/vagrant-galaxy
+
+### Install Pipeline
 
 ```sh
 cp -r hiseq-pipeline-galaxy ./galaxy-dist/tools/
@@ -12,7 +18,7 @@ fab vagrant galaxy:restart
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2015 Austin Davis-Richardson 
+Copyright (c) 2015 Austin Davis-Richardson, Eric W. Triplett
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
